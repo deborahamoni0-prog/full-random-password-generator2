@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RANDOM PASSWORD GENERATOR</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="password-generator">
+      <h2>Password Generator</h2>
+      <div class="password-display">
+        <output class="password-output" id="result"></output>
+        <button id="clipboard" class="copy-btn" title="copy to clipboard">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="m19 21H8V7h11m0.2H8a2 2 0 0 0.2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2.2V7a2 2 0 0 0.2.2m.3.4H4a2 2 0 0 0 2"
+            />
+          </svg>
+        </button>
+        <span> <i class="far fa-clipboard"></i></span>
+      </div>
+      <div class="strength-meter">
+        <div class="strength-bar"></div>
+        <span class="strength-text"
+          >strength: <span id="strength-value">weak</span></span
+        >
+      </div>
+      <div class="controls">
+        <div class="length-control">
+          <label for="length">password length</label>
+          <div class="length-value" id="length-value">20</div>
+          <input type="range" id="length" min="4" max="32" value="20" />
+        </div>
+        <div class="toggle-control">
+          <input type="checkbox" id="uppercase" checked />
+          <label for="uppercase">
+            <span class="toggle-track"></span>
+            <span>uppercase letters (A-Z)</span>
+          </label>
+        </div>
+        <div class="toggle-control">
+          <input type="checkbox" id="lowercase" checked />
+          <label for="lowercase">
+            <span class="toggle-track"></span>
+            <span>lowercase letters (a-z)</span>
+          </label>
+        </div>
+        <div class="toggle-control">
+          <input type="checkbox" id="numbers" checked />
+          <label for="numbers">
+            <span class="toggle-track"></span>
+            <span>numbers (0-9)</span>
+          </label>
+        </div>
+        <div class="toggle-control">
+          <input type="checkbox" id="symbols" checked />
+          <label for="symbols">
+            <span class="toggle-track"></span>
+            <span> symbols (!@#$%^&*)</span>
+          </label>
+        </div>
+      </div>
+      <button id="generate" class="generate-btn">Generate Password</button>
+    </div>
+    <script src="code.js"></script>
+  </body>
+</html>
